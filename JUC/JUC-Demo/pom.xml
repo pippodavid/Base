@@ -13,6 +13,7 @@
         <module>Atomic</module>
         <module>Locks</module>
         <module>synchronized</module>
+        <module>ThreadPool</module>
     </modules>
 
     <dependencies>
@@ -20,6 +21,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.0.0</version>
         </dependency>
     </dependencies>
 
