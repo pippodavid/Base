@@ -1,5 +1,5 @@
-import com.david.CountDownLatchDemo;
-import com.david.CyclicBarrierDemo;
+import com.david.CountDownLatch.CountDownLatchDemo;
+import com.david.CyclicBarrier.CyclicBarrierDemo;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

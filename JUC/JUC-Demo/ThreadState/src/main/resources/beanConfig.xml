@@ -8,9 +8,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
    <!--告知spring在创建容器时需要扫描的包，在context名称空间和约束中-->
 
-   <bean id="countDownLatchDemo" class="com.david.CountDownLatchDemo" scope="singleton">
+   <bean id="countDownLatchDemo" class="com.david.CountDownLatch.CountDownLatchDemo" scope="singleton">
    </bean>
-   <bean id="cyclicBarrierDemo" class="com.david.CyclicBarrierDemo" scope="singleton">
+   <bean id="cyclicBarrierDemo" class="com.david.CyclicBarrier.CyclicBarrierDemo" scope="singleton">
    </bean>
    <!--context:component-scan base-package="com.david"></context:component-scan-->
 </beans>
