@@ -1,8 +1,14 @@
+package SynchornizedUpgrade;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.openjdk.jol.info.ClassLayout;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+/*
+* 本类说明了synchornized锁升级的方法，
+* 从无锁，偏向锁，轻量级锁，重量级锁的升级方法一一说明
+* */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SynUpgradeDemo {
 
@@ -11,7 +17,7 @@ public class SynUpgradeDemo {
     public void initObj() {
         ClassLayout layout = ClassLayout.parseInstance(a);
 
-        System.out.println("Person 对象：");
+        System.out.println("Pojo.Person 对象：");
         System.out.println(layout.toPrintable());
     }
 
@@ -20,7 +26,7 @@ public class SynUpgradeDemo {
         ClassLayout layout = ClassLayout.parseInstance(a);
 
         synchronized (a) {
-            System.out.println("Person 第一次被锁定");
+            System.out.println("Pojo.Person 第一次被锁定");
             System.out.println(layout.toPrintable());
         }
 
@@ -35,13 +41,13 @@ public class SynUpgradeDemo {
 
         //这里升级到轻量级锁
         synchronized (a) {
-            System.out.println("Person 第一次被锁定");
+            System.out.println("Pojo.Person 第一次被锁定");
             System.out.println(layout.toPrintable());
         }
 
         new Thread(() -> {
             synchronized (a) {
-                System.out.println("Person 第二次被锁定");
+                System.out.println("Pojo.Person 第二次被锁定");
                 System.out.println(layout.toPrintable());
             }
         }).start();
@@ -59,7 +65,7 @@ public class SynUpgradeDemo {
             @Override
             public void run() {
                 synchronized (a) {
-                    System.out.println("Person 第一次被锁定");
+                    System.out.println("Pojo.Person 第一次被锁定");
                     System.out.println(layout.toPrintable());
                 }
             }
@@ -71,7 +77,7 @@ public class SynUpgradeDemo {
             @Override
             public void run() {
                 synchronized (a) {
-                    System.out.println("Person 第二次被锁定");
+                    System.out.println("Pojo.Person 第二次被锁定");
                     System.out.println(layout.toPrintable());
                     try {
                         Thread.sleep(2000L);

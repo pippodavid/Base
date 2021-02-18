@@ -1,4 +1,4 @@
-package com.david;
+package com.david.ReentrantLock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

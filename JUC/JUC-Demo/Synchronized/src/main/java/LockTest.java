@@ -6,11 +6,11 @@ public class LockTest {
 
         ClassLayout layout = ClassLayout.parseInstance(a);
 
-        System.out.println("Person 对象：");
+        System.out.println("Pojo.Person 对象：");
         System.out.println(layout.toPrintable());
 
         synchronized (a) {
-            System.out.println("Person 第一次被锁定");
+            System.out.println("Pojo.Person 第一次被锁定");
             System.out.println(layout.toPrintable());
         }
 

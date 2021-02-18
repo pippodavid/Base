@@ -1,4 +1,4 @@
-package com.david;
+package com.david.ReentrantLock;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -18,9 +18,9 @@ public class ReentrantLockDemo_3 {
     void enq() throws InterruptedException {
         lock.lock();
         try {
-            while (队列已满) {
+            //while (队列已满) {
                 notFull.await();
-            }
+            //}
             //省略入队操作
             //入队后，通知可出队
             notEmpty.signal();
@@ -33,9 +33,9 @@ public class ReentrantLockDemo_3 {
     void deq() throws InterruptedException{
         lock.lock();
         try {
-            while (队列已空) {
+            //while (队列已空) {
                 notEmpty.await();
-            }
+            //}
             // 省略入队操作
             // 入队后，通知可出队
             notFull.signal();

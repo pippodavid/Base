@@ -1,4 +1,4 @@
-package com.david;
+package com.david.CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

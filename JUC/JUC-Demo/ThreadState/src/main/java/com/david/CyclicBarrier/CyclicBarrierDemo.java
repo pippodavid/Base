@@ -1,4 +1,4 @@
-package com.david;
+package com.david.CyclicBarrier;
 
 import java.util.Map;
 import java.util.concurrent.BrokenBarrierException;
