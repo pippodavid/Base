@@ -27,7 +27,7 @@ public class TestCountDownAndCyclicBarrier {
 
     @Test
     public void TestCyclicBarrier() throws InterruptedException {
-        cyclicBarrierDemo.runCalcutlate();
+        cyclicBarrierDemo.runCyclicBarrier();
     }
 
 }

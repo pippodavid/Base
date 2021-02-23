@@ -4,14 +4,19 @@ import java.util.Map;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class CyclicBarrierDemo {
     private static final int THEAD_COUNT = 3;
     private CyclicBarrier cyclicBarrier = new CyclicBarrier(THEAD_COUNT);
+    private ExecutorService executorService = Executors.newFixedThreadPool(THEAD_COUNT);
     private ConcurrentHashMap<String, Integer> countMap = new ConcurrentHashMap<String, Integer>();
 
     public void runCyclicBarrier() {
-        Runnable runnable = new Runnable() {
+        Runnable runnable = new Runnable(){
             public void run() {
                 int result = 0;
 
@@ -19,14 +24,29 @@ public class CyclicBarrierDemo {
                     result += entry.getValue();
                 }
                 countMap.put(Thread.currentThread().getName() + "result", result);
+                //cyclicBarrier;
             }
         };
+        executorService.submit(runnable);
 
-        if (cyclicBarrier.isBroken()) {
-            cyclicBarrier.reset();
+        try {
+            //等待线程都到达指定“位置”
+            cyclicBarrier.await(1000, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (BrokenBarrierException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        } finally {
+            if (cyclicBarrier.isBroken()) {
+                cyclicBarrier.reset();
+            }
         }
 
         System.out.println(countMap);
+
+
     }
 
     public void runCalcutlate() {

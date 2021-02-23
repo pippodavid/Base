@@ -1,6 +1,6 @@
 package ExecutorsTest;
 
-import com.david.ExecutorService.ForkJoinSumCalculate;
+import com.david.ExecutorService.ForkJoinPool.ForkJoinSumCalculate;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
