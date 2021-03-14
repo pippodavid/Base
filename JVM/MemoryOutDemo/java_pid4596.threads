@@ -1,0 +1,121 @@
+Thread 0x3db22c0
+  at java.lang.OutOfMemoryError.<init>()V (OutOfMemoryError.java:48)
+  at java.util.Arrays.copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object; (Arrays.java:3210)
+  at java.util.Arrays.copyOf([Ljava/lang/Object;I)[Ljava/lang/Object; (Arrays.java:3181)
+  at java.util.ArrayList.grow(I)V (ArrayList.java:265)
+  at java.util.ArrayList.ensureExplicitCapacity(I)V (ArrayList.java:239)
+  at java.util.ArrayList.ensureCapacityInternal(I)V (ArrayList.java:231)
+  at java.util.ArrayList.add(Ljava/lang/Object;)Z (ArrayList.java:462)
+  at OOMServiceDemo_1$1.run()V (OOMServiceDemo_1.java:22)
+  at java.lang.Thread.run()V (Thread.java:748)
+
+  locals:
+    objectId=0x415f9f8, line=1
+    objectId=0x3da3ca0, line=1
+    objectId=0x415f9f8, line=2
+    objectId=0x3db9260, line=3
+    objectId=0x3db9260, line=6
+    objectId=0x3c6b450, line=6
+    objectId=0x3db2438, line=7
+    objectId=0x3db22c0, line=8
+
+Thread 0x3db27a0
+  at java.net.SocketInputStream.socketRead0(Ljava/io/FileDescriptor;[BIII)I (Native Method)
+  at java.net.SocketInputStream.socketRead(Ljava/io/FileDescriptor;[BIII)I (SocketInputStream.java:116)
+  at java.net.SocketInputStream.read([BIII)I (SocketInputStream.java:171)
+  at java.net.SocketInputStream.read([BII)I (SocketInputStream.java:141)
+  at sun.nio.cs.StreamDecoder.readBytes()I (StreamDecoder.java:284)
+  at sun.nio.cs.StreamDecoder.implRead([CII)I (StreamDecoder.java:326)
+  at sun.nio.cs.StreamDecoder.read([CII)I (StreamDecoder.java:178)
+  at java.io.InputStreamReader.read([CII)I (InputStreamReader.java:184)
+  at java.io.BufferedReader.fill()V (BufferedReader.java:161)
+  at java.io.BufferedReader.readLine(Z)Ljava/lang/String; (BufferedReader.java:324)
+  at java.io.BufferedReader.readLine()Ljava/lang/String; (BufferedReader.java:389)
+  at com.intellij.rt.execution.application.AppMainV2$1.run()V (AppMainV2.java:64)
+
+  locals:
+    objectId=0x3db2920, line=1
+    objectId=0x3db2950, line=1
+    objectId=0x3db2970, line=1
+    objectId=0x3db2920, line=2
+    objectId=0x3db2970, line=2
+    objectId=0x3db2950, line=2
+    objectId=0x3db2920, line=3
+    objectId=0x3db2970, line=3
+    objectId=0x3db4980, line=4
+    objectId=0x3db4980, line=5
+    objectId=0x3db49a8, line=5
+    objectId=0x3db89b8, line=5
+    objectId=0x3db89e8, line=5
+    objectId=0x3db4980, line=6
+    objectId=0x3db49a8, line=6
+    objectId=0x3db89f8, line=6
+    objectId=0x3db89f8, line=7
+    objectId=0x3db49a8, line=7
+    objectId=0x3db8a10, line=8
+    objectId=0x3db8a10, line=9
+    objectId=0x3db89f8, line=9
+    objectId=0x3db8a10, line=10
+    objectId=0x3db27a0, line=11
+    objectId=0x3db8a40, line=11
+    objectId=0x3db8a10, line=11
+
+Thread 0x3db8a58
+
+  locals:
+
+Thread 0x3db8bd0
+
+  locals:
+
+Thread 0x3db8d48
+  at java.lang.Object.wait(J)V (Native Method)
+  at java.lang.ref.ReferenceQueue.remove(J)Ljava/lang/ref/Reference; (ReferenceQueue.java:143)
+  at java.lang.ref.ReferenceQueue.remove()Ljava/lang/ref/Reference; (ReferenceQueue.java:164)
+  at java.lang.ref.Finalizer$FinalizerThread.run()V (Finalizer.java:209)
+
+  locals:
+    objectId=0x3db8ed0, line=1
+    objectId=0x3db8ec8, line=1
+    objectId=0x3db8ed0, line=2
+    objectId=0x3db8d48, line=3
+    objectId=0x3db8ee8, line=3
+
+Thread 0x3db8ef0
+  at java.lang.Object.wait(J)V (Native Method)
+  at java.lang.Object.wait()V (Object.java:502)
+  at java.lang.ref.Reference.tryHandlePending(Z)Z (Reference.java:191)
+  at java.lang.ref.Reference$ReferenceHandler.run()V (Reference.java:153)
+
+  locals:
+    objectId=0x3db9068, line=1
+    objectId=0x3db9068, line=2
+    objectId=0x3db8ef0, line=3
+
+Thread 0x3db9090
+  at sun.misc.Unsafe.park(ZJ)V (Native Method)
+  at java.util.concurrent.locks.LockSupport.park(Ljava/lang/Object;)V (LockSupport.java:175)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt()Z (AbstractQueuedSynchronizer.java:836)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(I)V (AbstractQueuedSynchronizer.java:997)
+  at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(I)V (AbstractQueuedSynchronizer.java:1304)
+  at java.util.concurrent.CountDownLatch.await()V (CountDownLatch.java:231)
+  at OOMServiceDemo_1.distinct()Ljava/util/ArrayList; (OOMServiceDemo_1.java:36)
+  at OOMServiceDemo_1.main([Ljava/lang/String;)V (OOMServiceDemo_1.java:43)
+
+  locals:
+    objectId=0x3db9078, line=1
+    objectId=0x3db9090, line=1
+    objectId=0x3db9078, line=2
+    objectId=0x3db9078, line=3
+    objectId=0x3db9208, line=3
+    objectId=0x3db9228, line=3
+    objectId=0x3db9078, line=4
+    objectId=0x3db9248, line=5
+    objectId=0x3db9258, line=6
+    objectId=0x3db9260, line=6
+    objectId=0x3db9248, line=6
+    objectId=0x3db2438, line=6
+    objectId=0x3db22c0, line=6
+    objectId=0x3db9278, line=7
+    objectId=0x3db9258, line=7
+
